@@ -7,18 +7,20 @@ void main() {
     power *= 2;
   }
 
-  print(power); // 1024
+  print(power); 
 
   // Challenge 4: Fibonacci
   const n = 10;
-  var previous = 1; // 1st Fibonacci number
-  var current = 1; // 2nd Fibonacci number
+  var previous = 1;  
+  var current = 1;
+  var series = [previous, current];
 
   for (var i = 3; i <= n; i++) {
     final next = previous + current;
     previous = current;
     current = next;
+    series.add(current);
   }
 
-  print(current); // 55  (1, 1, 2, 3, 5, 8, 13, 21, 34, 55)
+  print(series);
 }
